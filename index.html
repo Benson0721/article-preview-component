@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./src/css/generated-tailwind.css" />
+    <link rel="stylesheet" href="./src/css/app.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Article preview component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="mosaic-bg">
+      <article class="article bg-DarkBlue">
+        <svg
+          class="article__cancel"
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="20"
+          height="20"
+          viewBox="0 0 30 30"
+          style="fill: #ffffff9c"
+        >
+          <path
+            d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z"
+          ></path>
+        </svg>
+        <figure class="article__image">
+          <img src="./public/images/sakura.webp" alt="post-image" />
+        </figure>
+        <div class="article__main">
+          <main class="article__content-box">
+            <section class="article__content">
+              <h1 class="text-[19px] text-BlueWhite font-bold">
+                Shift the overall look and feel by adding these wonderful
+                touches to furniture in your home
+              </h1>
+              <p class="text-WhiteGray font-medium mt-4">
+                Ever been in a room and felt like something was missing? Perhaps
+                it felt slightly bare and uninviting. I’ve got some simple tips
+                to help you make any room feel complete.
+              </p>
+            </section>
+          </main>
+          <footer class="article__footer mt-4 lg:mt-8">
+            <div class="article__footer--type1">
+              <figure class="article__headshot mr-4">
+                <img src="./public/images/bird.jpg" alt="" />
+              </figure>
+              <div class="article__person">
+                <h2 class="text-BlueWhite font-bold text-[15px]">Mpass</h2>
+                <p class="text-WhiteGray font-medium">28 Octobor 2025</p>
+              </div>
+              <button class="article__shareIcon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="-8 -7 30 30"
+                >
+                  <path
+                    fill="#c4c8e38c"
+                    d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="article__footer--type2 bg-DarkGray">
+              <div class="triangle"></div>
+              <p class="article__shareText font-medium text-LightGray">SHARE</p>
+              <div class="article__social">
+                <a
+                  href="https://youtu.be/GfDXqY-V0EY?si=FGk4cXIpybDl3Lun"
+                  class="disable"
+                >
+                  <img
+                    class="article__social__icon"
+                    width="20"
+                    height="20"
+                    src="https://img.icons8.com/ios-filled/50/FFFFFF/youtube-play.png"
+                    alt="youtube-play"
+                  />
+                </a>
+                <a href="https://www.instagram.com/mpassca/" class="disable">
+                  <img
+                    class="article__social__icon"
+                    width="25"
+                    height="25"
+                    src="https://img.icons8.com/fluency-systems-filled/48/FFFFFF/instagram-new.png"
+                    alt="instagram-new"
+                  />
+                </a>
+                <a href="https://github.com/Benson0721" class="disable">
+                  <img
+                    class="article__social__icon"
+                    width="25"
+                    height="25"
+                    src="https://img.icons8.com/ios-glyphs/30/FFFFFF/github.png"
+                    alt="github"
+                  />
+                </a>
+              </div>
+              <button
+                class="article__shareIcon article__shareIcon--white lg:hidden"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="-8 -7 30 30"
+                >
+                  <path
+                    fill="#c4c8e38c"
+                    d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </footer>
+        </div>
+      </article>
+    </div>
+    <script defer src="./app.js"></script>
+  </body>
+</html>

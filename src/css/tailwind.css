@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+
+@layer base {
+    body{
+        @apply m-0 p-0 font-manrope text-[13px] 
+    }
+}

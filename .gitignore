@@ -30,7 +30,7 @@ dist-ssr
 deploy.sh
 design
 .vscode
-
+typing_demo
 /src/scss/*.scss
 /src/css/*.css.map
 # Editor directories and files

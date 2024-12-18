@@ -100,12 +100,12 @@ video {
 
 .triangle {
   position: absolute;
-  top: 48px;
+  top: 43px;
   width: 0;
   height: 0;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-top: 15px solid #48556a; /* 你可以改變顏色 */
+  border-top: 15px solid #9eafc2;
 }
 
 .mosaic-bg {
@@ -136,10 +136,14 @@ video {
   overflow: visible;
   width: 327px;
   position: relative;
+  border-radius: 10px;
 }
 .article__image {
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   overflow: hidden;
+}
+.article__image img {
+  height: 100%;
 }
 .article__cancel {
   position: absolute;
@@ -147,6 +151,7 @@ video {
   right: 10px;
 }
 .article__content-box {
+  height: 266px;
   padding: 25px 25px 0px 25px;
 }
 .article__content {
@@ -164,6 +169,7 @@ video {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  border-radius: 0px 0px 10px 10px;
 }
 .article__footer--type1 {
   display: inherit;
@@ -174,7 +180,7 @@ video {
       -ms-flex-align: inherit;
           align-items: inherit;
   width: inherit;
-  padding: 15px 25px 15px 25px;
+  padding: 15px 25px 10px 25px;
 }
 .article__footer--type2 {
   position: absolute;
@@ -242,7 +248,39 @@ video {
   margin-right: 15px;
 }
 
+#text-container {
+  max-inline-size: 33ch;
+  white-space: normal; /* 允許換行 */
+  display: inline-block; /* 使容器自動根據內容調整寬度 */
+  position: relative; /* 使光標能相對於容器定位 */
+}
+
+.cursor {
+  display: inline-block; /* 使光標能跟隨文本 */
+  width: 2px; /* 光標寬度 */
+  height: 20px;
+  background-color: white; /* 光標顏色 */
+  -webkit-animation: blink 0.75s step-end infinite;
+          animation: blink 0.75s step-end infinite; /* 光標閃爍 */
+  position: absolute; /* 使光標位置絕對 */
+  bottom: 0; /* 與文字底部對齊 */
+}
+
+@-webkit-keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}
+
+@keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}
 @media only screen and (min-width: 1440px) {
+  #text-container {
+    max-inline-size: none;
+  }
   .article {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -253,13 +291,21 @@ video {
             flex-direction: row;
     width: 60%;
     position: relative;
+    border-radius: 10px;
+  }
+  .article__image {
+    border-radius: 10px 0px 0px 10px;
+    overflow: hidden;
+  }
+  .article__image img {
+    height: 100%;
+  }
+  .article__content-box {
+    height: 218px;
   }
   .article__cancel {
     position: absolute;
     top: 10px;
-  }
-  .article__content-box {
-    padding-top: 15px;
   }
   .article__image {
     -webkit-box-flex: 5;
@@ -271,7 +317,7 @@ video {
     max-width: none;
   }
   .article__footer {
-    max-width: 80%;
+    max-width: 90%;
   }
   .article__main {
     -webkit-box-flex: 5;
@@ -294,8 +340,8 @@ video {
   }
   .article__footer--type2 {
     position: absolute;
-    top: 170px;
-    right: -35px;
+    top: 206px;
+    right: -40px;
     width: 245px;
     height: 50px;
     border-radius: 5px;

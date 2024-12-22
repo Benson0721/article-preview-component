@@ -290,6 +290,7 @@ video {
         -ms-flex-direction: row;
             flex-direction: row;
     width: 60%;
+    max-width: 900px;
     position: relative;
     border-radius: 10px;
   }

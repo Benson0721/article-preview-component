@@ -86,8 +86,7 @@ video {
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .hidden {
@@ -114,25 +113,14 @@ video {
   height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .article {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   overflow: visible;
   width: 327px;
   position: relative;
@@ -159,26 +147,16 @@ video {
   max-width: 300px;
 }
 .article__footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   border-radius: 0px 0px 10px 10px;
 }
 .article__footer--type1 {
   display: inherit;
-  -webkit-box-pack: inherit;
-      -ms-flex-pack: inherit;
-          justify-content: inherit;
-  -webkit-box-align: inherit;
-      -ms-flex-align: inherit;
-          align-items: inherit;
+  justify-content: inherit;
+  align-items: inherit;
   width: inherit;
   padding: 15px 25px 10px 25px;
 }
@@ -186,30 +164,18 @@ video {
   position: absolute;
   bottom: 0px;
   display: inherit;
-  -webkit-box-pack: inherit;
-      -ms-flex-pack: inherit;
-          justify-content: inherit;
-  -webkit-box-align: inherit;
-      -ms-flex-align: inherit;
-          align-items: inherit;
+  justify-content: inherit;
+  align-items: inherit;
   width: inherit;
   padding: 15px 25px 15px 25px;
-  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
-  transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
   transition: opacity 0.5s ease, transform 0.5s ease;
-  transition: opacity 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
   opacity: 0;
-  -webkit-transform: translateY(10px);
-          transform: translateY(10px); /* 初始位置稍微向下 */
+  transform: translateY(10px); /* 初始位置稍微向下 */
 }
 .article__footer--type2.visible {
   opacity: 1;
-  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
-  transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
   transition: opacity 0.5s ease, transform 0.5s ease;
-  transition: opacity 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
-  -webkit-transform: translateY(0);
-          transform: translateY(0); /* 回到原位置 */
+  transform: translateY(0); /* 回到原位置 */
 }
 .article__headshot {
   width: 36px;
@@ -234,15 +200,9 @@ video {
   margin-right: 24px;
 }
 .article__social {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 .article__social__icon {
   margin-right: 15px;
@@ -260,16 +220,9 @@ video {
   width: 2px; /* 光標寬度 */
   height: 20px;
   background-color: white; /* 光標顏色 */
-  -webkit-animation: blink 0.75s step-end infinite;
-          animation: blink 0.75s step-end infinite; /* 光標閃爍 */
+  animation: blink 0.75s step-end infinite; /* 光標閃爍 */
   position: absolute; /* 使光標位置絕對 */
   bottom: 0; /* 與文字底部對齊 */
-}
-
-@-webkit-keyframes blink {
-  50% {
-    background-color: transparent;
-  }
 }
 
 @keyframes blink {
@@ -282,13 +235,8 @@ video {
     max-inline-size: none;
   }
   .article {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     width: 60%;
     max-width: 900px;
     position: relative;
@@ -309,9 +257,7 @@ video {
     top: 10px;
   }
   .article__image {
-    -webkit-box-flex: 5;
-        -ms-flex: 5;
-            flex: 5;
+    flex: 5;
     max-width: none;
   }
   .article__content {
@@ -321,22 +267,11 @@ video {
     max-width: 90%;
   }
   .article__main {
-    -webkit-box-flex: 5;
-        -ms-flex: 5;
-            flex: 5;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    flex: 5;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 0;
   }
   .article__footer--type2 {

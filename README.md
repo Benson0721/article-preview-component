@@ -25,12 +25,12 @@ Users should be able to:
 ### Screenshot
 
 -layout
-![](./screenshot_desktop.jpeg)
-![](./screenshot_mobile.jpeg)
+![](./display/screenshot_desktop.jpeg)
+![](./display/screenshot_mobile.jpeg)
 -active
-![](./screenshot_desktop_active.jpeg)
-![](./screenshot_mobile_active.jpeg)
-![](./typing.gif)
+![](./display/screenshot_desktop_active.jpeg)
+![](./display/screenshot_mobile_active.jpeg)
+![](./display/typing.gif)
 
 ### Links
 

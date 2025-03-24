@@ -1,0 +1,285 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none !important;
+}
+.disable {
+  pointer-events: none;
+}
+.triangle {
+  position: absolute;
+  top: 43px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #9eafc2;
+}
+.mosaic-bg {
+  background-image: url("../../public/images/bg.jpeg");
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  width: 327px;
+  position: relative;
+  border-radius: 10px;
+  &__image {
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    img {
+      height: 100%;
+    }
+  }
+  &__cancel {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  &__content-box {
+    height: 266px;
+    padding: 25px 25px 0px 25px;
+  }
+  &__content {
+    width: 100%;
+    max-width: 300px;
+  }
+  &__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    &--type1 {
+      display: inherit;
+      justify-content: inherit;
+      align-items: inherit;
+      width: inherit;
+      padding: 15px 25px 10px 25px;
+    }
+    &--type2 {
+      position: absolute;
+      bottom: 0px;
+      display: inherit;
+      justify-content: inherit;
+      align-items: inherit;
+      width: inherit;
+      padding: 15px 25px 15px 25px;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      opacity: 0;
+      transform: translateY(10px); /* 初始位置稍微向下 */
+    }
+    &--type2.visible {
+      opacity: 1;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      transform: translateY(0); /* 回到原位置 */
+    }
+  }
+  &__headshot {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      width: inherit;
+      height: inherit;
+    }
+  }
+
+  &__shareIcon {
+    margin-left: auto;
+    border-radius: 50%;
+    background-color: black;
+    &--white {
+      background-color: #6d7f97;
+    }
+  }
+  &__shareText {
+    letter-spacing: 5px;
+    margin-right: 24px;
+  }
+  &__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__icon {
+      margin-right: 15px;
+    }
+  }
+}
+
+#text-container {
+  max-inline-size: 33ch;
+  white-space: normal; /* 允許換行 */
+  display: inline-block; /* 使容器自動根據內容調整寬度 */
+  position: relative; /* 使光標能相對於容器定位 */
+}
+
+.cursor {
+  display: inline-block; /* 使光標能跟隨文本 */
+  width: 2px; /* 光標寬度 */
+  height: 20px;
+  background-color: white; /* 光標顏色 */
+  animation: blink 0.75s step-end infinite; /* 光標閃爍 */
+  position: absolute; /* 使光標位置絕對 */
+  bottom: 0; /* 與文字底部對齊 */
+}
+
+@keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  #text-container {
+    max-inline-size: none;
+  }
+  .article {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    max-width: 900px;
+    position: relative;
+    border-radius: 10px;
+    &__image {
+      border-radius: 10px 0px 0px 10px;
+      overflow: hidden;
+      img {
+        height: 100%;
+      }
+    }
+    &__content-box {
+      height: 218px;
+    }
+    &__cancel {
+      position: absolute;
+      top: 10px;
+    }
+
+    &__image {
+      flex: 5;
+      max-width: none;
+    }
+    &__content {
+      max-width: none;
+    }
+    &__footer {
+      max-width: 90%;
+    }
+    &__main {
+      flex: 5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    }
+    &__footer {
+      &--type2 {
+        position: absolute;
+        top: 206px;
+        right: -40px;
+        width: 245px;
+        height: 50px;
+        border-radius: 5px;
+      }
+    }
+  }
+}

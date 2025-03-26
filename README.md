@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/Benson0721/Grid-testimonials]
-- Live Site URL: [https://benson0721.github.io/Grid-testimonials/]
+- Solution URL: [https://github.com/Benson0721/article-preview-component]
+- Live Site URL: [https://benson0721.github.io/article-preview-component/]
 
 ## My process
 
